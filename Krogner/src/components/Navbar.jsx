@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react'
 import logo from '../assets/KROGNER-01.png' // Ajusta la ruta si está en otro lugar
-// import { HiMenu , HiX } from '../react-icons/hi';
+import { HiMenu , HiX } from 'react-icons/hi';
 
 const Navbar = () => {
     const [isMenuOpen, setisMenuOpen] = useState(false)
