@@ -51,7 +51,7 @@ const Navbar = () => {
 
 
             {/* get in touch  */}
-                <button className='hidden md:block bg-purple-900 text-white px-6 py-2.5 rounded-lg hover:bg-purple-950 text-sm font-medium transition-all hover:shadow-lg hover:shadow-purple-100'>
+                <button className='hidden md:block bg-rose-500 text-white px-6 py-2.5 rounded-lg hover:bg-rose-300 text-sm font-medium transition-all hover:shadow-lg hover:shadow-purple-100'>
                 Contáctanos
                 </button>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
                             className={`block text-sm font-medium py-2 ${activeLink === link.href ? "text-blue-600" : "text-gray-600 hover:text-gray-900"}`} href={link.href}>{link.label}</a>
                         ))}
 
-                        <button className='w-full bg-purple-900 text-white px-6 py-2.5 rounded-lg hover:bg-purple-950 text-sm font-medium transition-all hover:shadow-lg hover:shadow-purple-100'>
+                        <button className='w-full bg-rose-500 text-white px-6 py-2.5 rounded-lg hover:bg-rose-300 text-sm font-medium transition-all hover:shadow-lg hover:shadow-purple-100'>
                             Contáctanos
                         </button>
 
