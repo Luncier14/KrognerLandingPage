@@ -12,10 +12,10 @@ const Hero = () => {
         </div>
 
         <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold leading-tight '>
-            Impulsamos tu crecimiento con 
-            <span className='text-purple-900 relative inline-block'> Soluciones  
+            Impulsamos tu crecimiento con <br />  
+            <span className='text-purple-900 relative inline-block'> Soluciones
                 <span className='absolute bottom-0 left-0 w-full h-1 bg-purple-200'></span>
-                </span> Tecnológicas personalizadas
+                </span> <br />Tecnológicas personalizadas
             <span>💻</span>
         </h1>
 
@@ -24,7 +24,7 @@ const Hero = () => {
         <div className='flex gap-3 max-w-md'>
             <input type="email" placeholder='Email Address' className='flex-1 px-6 py-4 border border-gray-200 
             rounded-xl focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all'/>
-            <button className='bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 cursor-pointer
+            <button className='bg-purple-900 text-white px-8 py-4 rounded-xl hover:bg-purple-700 cursor-pointer
              transition-all hover:shadow-lg hover:shadow-blue-300'>➜</button>
         </div>
 
