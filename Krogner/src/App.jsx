@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import CompanyLogo from './components/CompanyLogo'
 import PurposeSection from './components/PurposeSection'
 import FeaturesSection from './components/FeaturesSection'
+import ServiceSection from './components/ServiceSection'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
           <CompanyLogo/>
           <PurposeSection/>
           <FeaturesSection/>
-          
+          <ServiceSection/>
 
         </div>
     </main>
