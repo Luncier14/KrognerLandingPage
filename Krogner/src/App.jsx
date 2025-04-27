@@ -17,6 +17,7 @@ function App() {
           <CompanyLogo/>
           <PurposeSection/>
           <FeaturesSection/>
+          
 
         </div>
     </main>
