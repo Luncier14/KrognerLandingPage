@@ -16,17 +16,18 @@ const CompanyLogo = () => {
 
       {/* Outer Wrapper */}
       <div className='relative w-full overflow-hidden group'>
-  <div className='flex w-max animate-[marquee_25s_linear_infinite] whitespace-nowrap group-hover:[animation-play-state:paused]'>
-    {[...logos, ...logos].map((logo, index) => (
-      <img
-        key={index}
-        src={logo}
-        alt="Logo Company"
-        className='mx-12 h-16 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all'
-      />
-    ))}
-  </div>
-</div>
+        <div className='flex w-max animate-[marquee_25s_linear_infinite] whitespace-nowrap group-hover:[animation-play-state:paused]'>
+          {/* Duplicamos muchas veces para fluidez */}
+          {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
+            <img
+              key={index}
+              src={logo}
+              alt="Logo Company"
+              className='mx-12 h-16 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all'
+            />
+          ))}
+        </div>
+      </div>
 
     </div>
   )
