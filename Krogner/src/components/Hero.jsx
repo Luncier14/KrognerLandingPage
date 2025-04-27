@@ -3,7 +3,7 @@ import HeroPic1 from "../assets/HeroPic1.png"
 
 const Hero = () => {
   return (
-    <section className='container mx-auto flex flex-col md:flex-row justify-between pt-44 pb-6 px-4 sm:px-6 lg:px-8'>
+    <section id='home' className='container mx-auto flex flex-col md:flex-row justify-between pt-44 pb-6 px-4 sm:px-6 lg:px-8'>
         {/* Left Column */}
         <div className='w-full md:w-1/2 space-y-8'>
         <div className='flex items-center gap-2 bg-rose-500 font-semibold text w-fit px-4 py-2 rounded-full hover:bg-rose-300 transition-colors cursor-pointer group'>
