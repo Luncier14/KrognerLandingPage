@@ -3,18 +3,18 @@ import React from 'react'
 const features = [
     {
       icon: "🔍", 
-      title: "Find out what you need",
-      description: "We present you a proposal and discuss nitty-gritty like"
+      title: "Identificamos tus necesidades",
+      description: "Presentamos una propuesta detallada, entendiendo cada detalle para ofrecerte la mejor solución adaptada a tu empresa."
     },
     {
       icon: "⚙️",
-      title: "Work out the details", 
-      description: "Communication protocols apart from engagement models"
+      title: "Personalización y alineación", 
+      description: "Ajustamos cada detalle, para asegurar que todo esté perfectamente alineado con tus objetivos."
     },
     {
       icon: "🚀",
-      title: "We get to work fast",
-      description: "Protocols apart from engage models, pricing billing"
+      title: "Implementación rápida y efectiva",
+      description: "Con todos los detalles en su lugar, nos enfocamos en ejecutar las soluciones de manera rápida y eficiente."
     }
   ]
 
@@ -24,8 +24,8 @@ const FeaturesSection = () => {
     <section className='max-w-7xl mx-auto px-4 py-16'>
         {/* Heading texts */}
         <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold mb-4'>How can we help your business</h2>
-            <p className='text-gray-600'>When you reseell you build</p>
+            <h2 className='text-3xl font-bold mb-4'>¿Cómo podemos ayudar a tu negocio?</h2>
+            <p className='text-gray-600'>La confianza es la base de nuestras soluciones tecnológicas a medida.</p>
         </div>
 
         {/* Features */}
@@ -50,7 +50,7 @@ const FeaturesSection = () => {
 
 
         <div className='text-center mt-12'>
-            <button className='bg-purple-500 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-purple-800 transition-colors relative'>Adquiere servicios 
+            <button className='bg-purple-500 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-purple-800 transition-colors relative'>Agenda una consulta personalizada 
                 <div className='absolute -z-10 w-full h-full rounded-full bg-purple-600/80 blur-xl top-0 left-0'>
 
                 </div>
