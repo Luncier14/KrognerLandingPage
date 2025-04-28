@@ -1,29 +1,30 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 
-// Configuración del transporte SMTP con verificación
+// Configuración SMTP con variables de entorno
 const transporter = nodemailer.createTransport({
-    host: 'smtp.titan.email',
-    port: 465,
-    secure: true,
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT),
+    secure: process.env.SMTP_SECURE === 'true',
     auth: {
-        user: 'info@krogner.co.cr',
-        pass: 'It4iI~y^gy|{HWT'
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
     },
     tls: {
-        rejectUnauthorized: false // Solo para desarrollo, quitar en producción
+        rejectUnauthorized: false // Solo para desarrollo
     }
 });
 
-// Verificar conexión SMTP al iniciar
+// Verificación SMTP
 transporter.verify((error, success) => {
     if (error) {
         console.error('Error verificando conexión SMTP:', error);
@@ -32,11 +33,10 @@ transporter.verify((error, success) => {
     }
 });
 
-// Ruta para recibir el formulario
+// Ruta para enviar correos
 app.post('/send', async (req, res) => {
     const { firstName, lastName, company, email, phone, message } = req.body;
 
-    // Validación básica de campos requeridos
     if (!firstName || !lastName || !email || !message) {
         return res.status(400).json({
             error: 'Faltan campos requeridos: nombre, apellido, email o mensaje'
@@ -44,8 +44,8 @@ app.post('/send', async (req, res) => {
     }
 
     const mailOptions = {
-        from: '"Formulario Web" <info@krogner.co.cr>',
-        to: 'jonathanqp201@gmail.com',
+        from: process.env.EMAIL_FROM,
+        to: process.env.EMAIL_TO,
         subject: '✉ Nuevo mensaje del formulario de contacto',
         html: `
           <!DOCTYPE html>
@@ -107,31 +107,23 @@ app.post('/send', async (req, res) => {
           
           ---
           Enviado el ${new Date().toLocaleString()} desde el formulario de contacto
-        `
-      };
+        `};
 
     try {
         const info = await transporter.sendMail(mailOptions);
-        console.log('Correo enviado:', info.messageId);
-        console.log('Detalles:', info);
-        
         res.status(200).json({
             success: true,
-            message: 'Correo enviado correctamente',
-            messageId: info.messageId
+            message: 'Correo enviado correctamente'
         });
     } catch (error) {
-        console.error('Error al enviar el correo:', error);
-        
+        console.error('Error al enviar correo:', error);
         res.status(500).json({
             success: false,
-            error: 'Error al enviar el correo',
-            details: error.message
+            error: 'Error al enviar el correo'
         });
     }
 });
 
-// Iniciar servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
