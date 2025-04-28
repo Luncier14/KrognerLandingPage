@@ -44,7 +44,8 @@ const ServiceSection = () => {
         <section className='py-20 container mx-auto px-4 sm:px-6 lg:px-8' id='Services'>
             {/* Gradiente Wrapper */}
             <div className='relative'>
-                <div className='absolute inset-0 w-full h-full bg-gradient-to-bl from-indigo-500/30 to-pink-500/30 rounded-lg blur-[80px] -z-10'></div>
+                {/* Ajuste del gradiente: Posicionando más arriba y cambiando tamaño */}
+                <div className='absolute -top-40 -right-10 w-[600px] h-[600px] bg-gradient-to-bl from-indigo-500/30 to-pink-500/30 rounded-full blur-[80px] -z-10'></div>
                 <div className='flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24'>
                     {/* Header */}
                     <div className='md:w-1/3 w-full'>
