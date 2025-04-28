@@ -90,7 +90,7 @@ export default function ContactForm() {
             <div className="mt-2.5">
               <div className="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
                 <div className="grid shrink-0 grid-cols-1 focus-within:relative">
-                  <select
+                  {/* <select
                     id="country"
                     name="country"
                     autoComplete="country"
@@ -104,13 +104,13 @@ export default function ContactForm() {
                   <ChevronDownIcon
                     aria-hidden="true"
                     className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                  />
+                  /> */}
                 </div>
                 <input
                   id="phone-number"
                   name="phone-number"
                   type="text"
-                  placeholder="1234-5678"
+                  placeholder="+506-"
                   className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
                 />
               </div>
