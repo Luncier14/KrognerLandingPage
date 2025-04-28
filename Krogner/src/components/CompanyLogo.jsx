@@ -24,7 +24,7 @@ const CompanyLogo = () => {
               key={index}
               src={logo}
               alt='Company Logo'
-              className='mx-16 h-24 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all'
+              className='mx-12 h-20 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all'
             />
           ))}
         </div>
