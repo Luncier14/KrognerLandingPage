@@ -36,13 +36,13 @@ const services = [
     {
         icon: <IoServer className="w-8 h-8 text-cyan-400" />,
         title: "Servidores NAS",
-        description: "Creamos soluciones de software a medida que optimizan procesos, mejoran la eficiencia y se adaptan a las necesidades específicas de tu empresa.",
+        description: "Implementamos soluciones de almacenamiento centralizado (NAS) para empresas que necesitan gestionar y proteger grandes volúmenes de datos.",
         link: "#learn-more"
     },
     {
         icon: <MdDeveloperMode className="w-8 h-8 text-yellow-700" />,
         title: "Desarrollo de Software",
-        description: "Implementamos soluciones de almacenamiento centralizado (NAS) para empresas que necesitan gestionar y proteger grandes volúmenes de datos.",
+        description: "Creamos soluciones de software a medida que optimizan procesos, mejoran la eficiencia y se adaptan a las necesidades específicas de tu empresa.",
         link: "#learn-more"
     },
 ]
