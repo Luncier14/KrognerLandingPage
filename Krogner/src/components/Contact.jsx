@@ -97,7 +97,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div id='contacto' className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -129,16 +129,16 @@ export default function ContactForm() {
                   <h4 className="text-lg font-medium text-gray-900">Teléfono</h4>
                   <div className="flex items-center mt-1">
                     <a 
-                      href="https://wa.me/50612345678" 
+                      href="https://wa.me/50687878480" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-purple-900 hover:text-purple-700"
                     >
-                      +506 1234 5678
+                      +506 8787 8480
                     </a>
                     <div className="relative ml-2">
                       <button 
-                        onClick={() => copyToClipboard('+50612345678', setCopiedPhone)}
+                        onClick={() => copyToClipboard('+50687878480', setCopiedPhone)}
                         className="p-1 text-gray-500 hover:text-gray-700"
                         title="Copiar número"
                       >
