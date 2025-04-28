@@ -3,32 +3,27 @@ import logo from '../assets/KROGNER-01.png'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaX } from 'react-icons/fa6'
 
 const footerLinks = {
-    company: [
-      { name: 'About', href: '#' },
-      { name: 'Terms of Use', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'How it Works', href: '#' },
-      { name: 'Contact Us', href: '#' },
+    Compañia: [
+      { name: 'Sobre', href: '#' },
+      { name: 'Terminos de Uso', href: '#' },
+      { name: 'Políticas de privacidad', href: '#' },
+      { name: 'Contactanos', href: '#' },
     ],
-    getHelp: [
-      { name: 'Support Carrer', href: '#' },
-      { name: '24h Service', href: '#' },
-      { name: 'Quick Chat', href: '#' },
-    ],
-    support: [
+    Soporte: [
       { name: 'FAQ', href: '#' },
-      { name: 'Policy', href: '#' },
-      { name: 'Business', href: '#' },
+      { name: 'Politicas', href: '#' },
+      { name: 'Negocios', href: '#' },
     ],
-    contact: [
-      { name: 'WhatsApp', href: '#' },
-      { name: 'Support 24', href: '#' },
+    Contacto: [
+      { name: 'WhatsApp', href: 'https://wa.me/50687878480' },
+    //   We should change support 24 for a href to a ticket page
+      { name: 'Soporte 24', href: 'https://wa.me/50687878480' }, 
     ],
   }
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-50'>
+    <footer className='bg-indigo-50'>
         <div className='container mx-auto px-4 sm:px6 lg:px-8 pt-16 pb-8'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12'>
                 {/* brand column */}
@@ -40,7 +35,8 @@ const Footer = () => {
 
                         <span className='text-xl font-medium ml-1'>Krogner</span>
                     </div>
-                    <p className='text-gray-600 mb-6 md:w-3/4'>The copy warned the little blind text
+                    <p className='text-gray-600 mb-6 md:w-3/4'>
+                    ¡Déjanos ayudarte a alcanzar tus objetivos tecnológicos!
 
                     </p>
                     <div className='flex gap-2'>
@@ -53,14 +49,14 @@ const Footer = () => {
                 {/* Footer nav items */}
 
                 <div className='lg:col-span-8'>
-                    <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+                    <div className='grid grid-cols-2 md:grid-cols-3 gap-8'>
                         {Object.entries(footerLinks).map(([category, Links], categoryIndex) => (
                             <div key={category}>
                                 <h3 className='text-lg font-medium mb-4 uppercase'>{category}</h3>
                                 <ul className='space-y-3'>
                                     {Links.map((link, index) => (
                                         <li key={index}>
-                                            <a href="#" className='text-gray-600 hover:text-gray-900'>{link.name}</a>
+                                            <a href={link.href} className='text-gray-600 hover:text-gray-900'>{link.name}</a>
                                         </li>
                                     ))}
                                 </ul>

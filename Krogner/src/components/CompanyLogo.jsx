@@ -1,12 +1,18 @@
-import React from 'react'
-import samsung from '../assets/Samsung.png'
-import HP from '../assets/HP.svg'
-import Asus from '../assets/Asus.svg'
-import Lenovo from '../assets/Lenovo.svg'
-import Corsair from '../assets/Corsair.svg'
+import React from 'react';
+import samsung from '../assets/Samsung.png';
+import HP from '../assets/HP.svg';
+import Asus from '../assets/Asus.svg';
+import Lenovo from '../assets/Lenovo.svg';
+import Corsair from '../assets/Corsair.svg';
+import Microsoft from '../assets/Microsoft.png';
+import Cisco from '../assets/cisco.png';
+import ubiquiti from '../assets/ubiquiti.png';
+import gigabyte from '../assets/gigabyte.png';
+import mikrotik from '../assets/mikrotik.svg';
+import linksys from '../assets/linksys.svg';
 
 const CompanyLogo = () => {
-  const logos = [samsung, HP, Asus, Lenovo, Corsair]
+  const logos = [samsung, HP, Asus, Lenovo, Corsair, Microsoft, Cisco, linksys, ubiquiti, mikrotik, gigabyte];
 
   return (
     <div className='w-full overflow-hidden container mx-auto py-20 gap-9 flex sm:flex-row flex-col sm:items-center items-start'>
@@ -16,27 +22,27 @@ const CompanyLogo = () => {
       </div>
 
       {/* Carril de logos */}
-      <div className='relative w-full overflow-hidden group'>
+      <div className='relative w-full overflow-hidden group bg-gray-100'>
         <div className='flex w-max animate-[scroll_30s_linear_infinite] whitespace-nowrap group-hover:[animation-play-state:paused]'>
           {/* LOGOS duplicados 3 veces para loop perfecto */}
           {[...logos, ...logos, ...logos].map((logo, index) => (
-            <img
+            <div 
               key={index}
-              src={logo}
-              alt='Company Logo'
-              className='mx-12 h-20 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all'
-
-
-
-
-
-              
-            />
+              className='mx-10 flex items-center justify-center'
+              style={{ width: '120px', height: '80px' }} // Tamaño fijo para todos los contenedores
+            >
+              <img
+                src={logo}
+                alt='Company Logo'
+                className='max-h-[60px] w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all'
+                style={{ maxWidth: '100px' }} // Tamaño máximo para las imágenes
+              />
+            </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default CompanyLogo
+export default CompanyLogo;
