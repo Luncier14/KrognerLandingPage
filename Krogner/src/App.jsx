@@ -5,6 +5,8 @@ import CompanyLogo from './components/CompanyLogo'
 import PurposeSection from './components/PurposeSection'
 import FeaturesSection from './components/FeaturesSection'
 import ServiceSection from './components/ServiceSection'
+import Footer from './components/Footer'
+import Example from './components/Contact'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
           <PurposeSection/>
           <FeaturesSection/>
           <ServiceSection/>
+          <Example/>
+          <Footer/>
 
         </div>
     </main>
