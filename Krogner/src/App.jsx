@@ -23,7 +23,6 @@ function App() {
           <ServiceSection/>
           <ContactForm/>
           <Footer/>
-
         </div>
     </main>
   )

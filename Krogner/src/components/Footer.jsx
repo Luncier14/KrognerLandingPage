@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/KROGNER-01.png'
+import logo from '../assets/krogner-logo.png'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaX } from 'react-icons/fa6'
 
 const footerLinks = {

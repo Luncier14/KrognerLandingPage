@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assets/KROGNER-01.png'
+import logo from '../assets/krogner-logo.png'
 import { HiMenu, HiX } from 'react-icons/hi';
 import { motion } from "framer-motion"
 import { fadeIn } from '../utilities/motion';

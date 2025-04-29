@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from "framer-motion"
+import { fadeIn , textVariant} from '../utilities/motion';
 
 const PurposeSection = () => {
 
@@ -12,11 +14,15 @@ const PurposeSection = () => {
       icon: "🔴", // Replace with your actual icon component or image
       title: "Colaboración sin barreras",
       description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
-    }
+    },
   ];
   
   return (
-    <section className='w-full bg-gray-100 py-16 px-4 sm:px-6 md:px-8' id='about'>
+    <motion.section 
+    variants={textVariant(0.7)}
+            initial="hidden"
+            whileInView="show"
+    className='w-full bg-gray-100 py-16 px-4 sm:px-6 md:px-8' id='about'>
         <div className='max-w-6xl mx-auto'> 
             <div className='grid md:grid-cols-3 grid-cols-1 gap-8'>
             <div className=''>
@@ -40,7 +46,7 @@ const PurposeSection = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </motion.section>
   )
 }
 

@@ -7,6 +7,9 @@ import { FaNetworkWired } from "react-icons/fa6";
 import { MdContactSupport } from "react-icons/md";
 import { MdDeveloperMode } from "react-icons/md";
 
+import { motion } from "framer-motion"
+import { fadeIn } from '../utilities/motion';
+
 
 const services = [
     {
@@ -53,7 +56,7 @@ const ServiceSection = () => {
             {/* Gradiente Wrapper */}
             <div className='relative'>
                 {/* Ajuste del gradiente: Posicionando más arriba y cambiando tamaño */}
-                <div className='absolute -top-40 -right-10 w-[600px] h-[600px] bg-gradient-to-bl from-indigo-500/30 to-pink-500/30 rounded-full blur-[80px] -z-10'></div>
+                <div className='absolute -top-40 -right-20 w-[400px] h-[400px] bg-gradient-to-bl from-indigo-500/30 to-pink-500/30 rounded-full blur-[80px] -z-10'></div>
                 <div className='flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24'>
                     {/* Header */}
                     <div className='md:w-1/3 w-full'>
@@ -75,20 +78,36 @@ const ServiceSection = () => {
                             </div>
                         </div>
 
-                        <button className='mt-8 bg-indigo-500 text-white px-8 py-3 cursor-pointer rounded-full hover:bg-indigo-800 transition-colors'>Empezar ahora</button>
+                        <button 
+                            className='mt-8 bg-indigo-500 text-white px-8 py-3 cursor-pointer rounded-full hover:bg-indigo-800 transition-colors relative z-20'>
+                            Empezar ahora
+                        </button>
                     </div>
 
                     {/* Services cards */}
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                    <motion.div
+                        className='grid grid-cols-1 md:grid-cols-3 gap-8'
+                        >
                         {services.map((service, index) => (
-                            <div key={index} className='bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:scale-105 hover:shadow-xl transition-all duration-300 z-10'>
-                                <div className='mb-4'>{service.icon}</div>
-                                <h3 className='text-xl font-semibold mb-2'>{service.title}</h3>
-                                <p className='text-gray-600 mb-4'>{service.description}</p>
-                                <a href={service.link} className='text-indigo-600 font-medium hover:text-indigo-700 hover:underline transition-colors'>Learn more</a>
-                            </div>
+                            <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: 50 }} // Direccion de la tarjeta eje x
+                            whileInView={{ opacity: 1, x: 0 }} 
+                            transition={{ 
+                                duration: 0.5, 
+                                delay: index * 0.3, 
+                                ease: "easeOut" 
+                            }}
+                            viewport={{ once: true }} 
+                            className='bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:scale-105 hover:shadow-xl transition-all duration-300 z-10'
+                            >
+                            <div className='mb-4'>{service.icon}</div>
+                            <h3 className='text-xl font-semibold mb-2'>{service.title}</h3>
+                            <p className='text-gray-600 mb-4'>{service.description}</p>
+                            <a href={service.link} className='text-indigo-600 font-medium hover:text-indigo-700 hover:underline transition-colors'>Learn more</a>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
