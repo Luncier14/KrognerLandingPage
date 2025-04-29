@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/KROGNER-01.png'
+import logo from '../assets/krogner-logo.png'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaX } from 'react-icons/fa6'
 
 const footerLinks = {
@@ -15,9 +15,9 @@ const footerLinks = {
       { name: 'Negocios', href: '#' },
     ],
     Contacto: [
-      { name: 'WhatsApp', href: 'https://wa.me/50687878480' },
+      { name: 'WhatsApp', href: 'https://wa.me/50687878480', target:"_blank" },
     //   We should change support 24 for a href to a ticket page
-      { name: 'Soporte 24', href: 'https://wa.me/50687878480' }, 
+      { name: 'Soporte 24', href: 'https://wa.me/50687878480', target:"_blank" }, 
     ],
   }
 
@@ -28,12 +28,12 @@ const Footer = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12'>
                 {/* brand column */}
                 <div className='lg:col-span-4 '>
-                    <div className='flex gap-1 items-center mb-6'>
+                    <div className='flex gap-2 items-center mb-1'>
                         <div className='flex items-center gap-2 cursor-pointer'>
-                                    <img src={logo} alt="Logo" className='h-20 w-20  opacity-75 hover:opacity-100 transition-opacity' />
+                                    <img src={logo} alt="Logo" className='h-40 w-40  opacity-75 hover:opacity-100 transition-opacity' />
                         </div>
 
-                        <span className='text-xl font-medium ml-1'>Krogner</span>
+                        <span className='text-xl font-medium ml-1'></span>
                     </div>
                     <p className='text-gray-600 mb-6 md:w-3/4'>
                     ¡Déjanos ayudarte a alcanzar tus objetivos tecnológicos!
@@ -56,7 +56,7 @@ const Footer = () => {
                                 <ul className='space-y-3'>
                                     {Links.map((link, index) => (
                                         <li key={index}>
-                                            <a href={link.href} className='text-gray-600 hover:text-gray-900'>{link.name}</a>
+                                            <a href={link.href} target={link.target} className='text-gray-600 hover:text-gray-900 hover:underline'>{link.name}</a>
                                         </li>
                                     ))}
                                 </ul>

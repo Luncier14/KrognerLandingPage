@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import { fadeIn , textVariant} from '../utilities/motion';
+import { textVariant} from '../utilities/motion';
 
 const PurposeSection = () => {
 
@@ -15,6 +15,36 @@ const PurposeSection = () => {
       title: "Colaboración sin barreras",
       description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
     },
+    {
+      icon: "🔴", // Replace with your actual icon component or image
+      title: "Colaboración sin barreras",
+      description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
+    },
+    {
+      icon: "🔴", // Replace with your actual icon component or image
+      title: "Colaboración sin barreras",
+      description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
+    },
+    {
+      icon: "🔴", // Replace with your actual icon component or image
+      title: "Colaboración sin barreras",
+      description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
+    },
+    {
+      icon: "🔴", // Replace with your actual icon component or image
+      title: "Colaboración sin barreras",
+      description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
+    },
+    {
+      icon: "🔴", // Replace with your actual icon component or image
+      title: "Colaboración sin barreras",
+      description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
+    },
+    {
+      icon: "🔴", // Replace with your actual icon component or image
+      title: "Colaboración sin barreras",
+      description: "Nos adaptamos a tus procesos y ritmo, integrándonos perfectamente con tu equipo para lograr resultados eficientes y de calidad."
+    },
   ];
   
   return (
@@ -23,7 +53,7 @@ const PurposeSection = () => {
             initial="hidden"
             whileInView="show"
     className='w-full bg-gray-100 py-16 px-4 sm:px-6 md:px-8' id='about'>
-        <div className='max-w-6xl mx-auto'> 
+        <div className='max-w-6xl mx-auto mt-12'> 
             <div className='grid md:grid-cols-3 grid-cols-1 gap-8'>
             <div className=''>
                 <p className='text-sm text-purple-800 font-medium mb-2'>Logra más!</p>

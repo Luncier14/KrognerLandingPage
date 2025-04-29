@@ -1,5 +1,6 @@
-'use client';
 import { useState, useEffect } from 'react';
+import { motion } from "framer-motion"
+import { fadeIn } from '../utilities/motion';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -114,7 +115,11 @@ export default function ContactForm() {
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Panel informativo */}
-          <div className="bg-indigo-50 rounded-2xl p-8 lg:p-12">
+          <motion.div
+          variants={fadeIn('right', 0.7)}
+                  initial="hidden"
+                  whileInView="show"
+          className="bg-indigo-50 rounded-2xl p-8 lg:p-12">
             <h3 className="text-2xl font-bold text-purple-900 mb-6">Información de contacto</h3>
             
             <div className="space-y-6">
@@ -245,10 +250,13 @@ export default function ContactForm() {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Formulario */}
-          <div>
+          <motion.div 
+          variants={fadeIn('left', 0.6)}
+          initial="hidden"
+          whileInView="show">
             <div className="text-center lg:text-left">
               <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Contáctanos</h2>
               <p className="mt-2 text-lg text-gray-600">Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
@@ -381,7 +389,7 @@ export default function ContactForm() {
                 </p>
               )}
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
