@@ -62,7 +62,7 @@ export default function ContactForm() {
     setFormStatus('Enviando mensaje...');
 
     try {
-      const response = await fetch('/send', {
+      const response = await fetch('http://localhost:3001/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
