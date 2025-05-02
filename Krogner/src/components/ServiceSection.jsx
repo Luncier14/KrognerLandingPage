@@ -15,37 +15,37 @@ const services = [
         icon: <HiLightBulb className="w-8 h-8 text-amber-400" />,
         title: "Asesorías tecnológicas",
         description: "Brindamos consultorías personalizadas para optimizar la tecnología de empresas y particulares, adaptándonos a sus necesidades.",
-        link: "#learn-more"
+        link: "Ver más"
     },
     {
         icon: <MdContactSupport className="w-8 h-8 text-indigo-600" />,
         title: "Soporte técnico y mantenimiento continuo",
         description: "Garantizamos que tus equipos y sistemas estén siempre funcionando de manera óptima mediante mantenimiento preventivo y correctivo.",
-        link: "#learn-more"
+        link: "Ver más"
     },
     {
         icon: <FaNetworkWired className="w-8 h-8 text-emerald-700" />,
         title: "Redes y CCTV",
         description: "Nos especializamos en el diseño, instalación y configuración de redes cableadas e inalámbricas para hogares, oficinas y grandes empresas.",
-        link: "#learn-more"
+        link: "Ver más"
     },
     {
         icon: <IoIosMail className="w-8 h-8 text-rose-900" />,
         title: "Correo Electrónico Empresarial",
         description: "Configuramos y gestionamos servicios de correo electrónico personalizados con tu propio dominio.",
-        link: "#learn-more"
+        link: "Ver más"
     },
     {
         icon: <IoServer className="w-8 h-8 text-cyan-400" />,
-        title: "Servidores NAS",
-        description: "Implementamos soluciones de almacenamiento centralizado (NAS) para empresas que necesitan gestionar y proteger grandes volúmenes de datos.",
-        link: "#learn-more"
+        title: "Servidores",
+        description: "Implementamos soluciones de almacenamiento centralizado para empresas que necesitan gestionar y proteger grandes volúmenes de datos.",
+        link: "Ver más"
     },
     {
         icon: <MdDeveloperMode className="w-8 h-8 text-yellow-700" />,
         title: "Desarrollo de Software",
         description: "Creamos soluciones de software a medida que optimizan procesos, mejoran la eficiencia y se adaptan a las necesidades específicas de tu empresa.",
-        link: "#learn-more"
+        link: "Ver más"
     },
 ]
 

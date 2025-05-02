@@ -6,7 +6,13 @@ import Footer from './components/Footer';
 // Importa tus páginas
 import Home from './pages/Home';
 import Tienda from './pages/Tienda';
-import Services from './pages/Services';
+import ServiceServer from './pages/Services/ServiceServers';
+import ServiceConsulting from './pages/Services/ServiceConsulting';
+import ServiceMail from './pages/Services/ServiceMail';
+import ServiceDeve from './pages/Services/ServiceDeve';
+import ServiceMaintainence from './pages/Services/ServiceMaintainence';
+import ServiceNetwork from './pages/Services/ServiceNetwork';
+
 import Nosotros from './pages/Nosotros';
 
 
@@ -24,7 +30,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tienda" element={<Tienda />} />
-          <Route path="/services" element={<Services/>} />
+          <Route path="/ServiceServer" element={<ServiceServer/>} />
+          <Route path="/ServiceConsulting" element={<ServiceConsulting/>} />
+          <Route path="/ServiceMail" element={<ServiceMail/>} />
+          <Route path="/ServiceDeve" element={<ServiceDeve/>} />
+          <Route path="/ServiceMaintainence" element={<ServiceMaintainence/>} />
+          <Route path="/ServiceNetwork" element={<ServiceNetwork/>} />
           <Route path="/about" element={<Nosotros/>} />
         </Routes>
       </div>
