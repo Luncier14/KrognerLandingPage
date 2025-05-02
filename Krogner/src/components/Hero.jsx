@@ -14,6 +14,7 @@ const Hero = () => {
         variants={fadeIn('right', 0.2)}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         >
             <div className='flex items-center gap-2 bg-rose-500 font-semibold text w-fit px-4 py-2 rounded-full hover:bg-rose-300 transition-colors cursor-pointer group'>
                 <span className='text-purple-600 group-hover:text-purple-400 group-hover:scale-110 transition-transform'>💫</span>

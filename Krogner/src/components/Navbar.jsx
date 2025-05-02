@@ -5,6 +5,23 @@ import { motion } from 'framer-motion';
 import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import logo from '../assets/krogner-logo.png';
 
+
+const servicesOptions = [
+  { label: 'Servidores', href: '/ServiceServer' },
+  { label: 'Redes y CCTV', href: 'ServiceNetwork' },
+  { label: 'Asesorías tecnológicas', href: "/ServiceConsulting" },
+  { label: 'Desarrollo de Software', href: "/ServiceDeve"},
+  { label: 'Correo Electrónico Empresarial', href: "/ServiceMail" },
+  { label: 'Soporte técnico y mantenimiento continuo', href: "/ServiceMaintainence" },
+];
+
+const navLinks = [
+  { href: '/', label: 'Inicio' },
+  { href: '/about', label: 'Nosotros' },
+  { href: '/ServiceServer', label: 'Servicios' },
+  { href: '#contacto', label: 'Contacto' },
+];
+
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -12,21 +29,8 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState(location.pathname);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const navLinks = [
-    { href: '/', label: 'Inicio' },
-    { href: '/about', label: 'Nosotros' },
-    { href: '/ServiceServer', label: 'Servicios' },
-    { href: '#contacto', label: 'Contacto' },
-  ];
 
-  const servicesOptions = [
-    { label: 'Servidores', href: '/ServiceServer' },
-    { label: 'Redes y CCTV', href: 'ServiceNetwork' },
-    { label: 'Asesorías tecnológicas', href: "/ServiceConsulting" },
-    { label: 'Desarrollo de Software', href: "/ServiceDeve"},
-    { label: 'Correo Electrónico Empresarial', href: "/ServiceMail" },
-    { label: 'Soporte técnico y mantenimiento continuo', href: "/ServiceMaintainence" },
-  ];
+
 
   const handleContactClick = (e) => {
     if (location.pathname === '/') {
@@ -58,8 +62,9 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 md:h-20">
@@ -117,7 +122,6 @@ const Navbar = () => {
                 to={link.href === '#contacto' ? '/' : link.href}
                 onClick={(e) => {
                   e.preventDefault();
-
                   if (link.href === '#contacto') {
                     handleContactClick(e);
                   } else {
@@ -199,9 +203,13 @@ const Navbar = () => {
                   key={link.href}
                   to={link.href}
                   onClick={(e) => {
-                    link.href === '#contacto'
-                      ? handleContactClick(e)
-                      : handleLinkClick(link.href);
+                    e.preventDefault();
+                    if (link.href === '#contacto') {
+                      handleContactClick(e);
+                    } else {
+                      handleLinkClick(link.href);
+                    }
+                    setIsMenuOpen(false);
                   }}
                   className={`block px-3 py-2 text-base font-medium ${
                     activeLink === link.href
