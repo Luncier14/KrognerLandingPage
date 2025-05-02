@@ -7,12 +7,12 @@ import logo from '../assets/krogner-logo.png';
 
 
 const servicesOptions = [
-  { label: 'Servidores', href: '/ServiceServer' },
-  { label: 'Redes y CCTV', href: 'ServiceNetwork' },
-  { label: 'Asesorías tecnológicas', href: "/ServiceConsulting" },
-  { label: 'Desarrollo de Software', href: "/ServiceDeve"},
-  { label: 'Correo Electrónico Empresarial', href: "/ServiceMail" },
-  { label: 'Soporte técnico y mantenimiento continuo', href: "/ServiceMaintainence" },
+  { label: 'Servidores', href: '/serviceServer' },
+  { label: 'Redes y CCTV', href: '/serviceNetwork' },
+  { label: 'Asesorías tecnológicas', href: "/serviceConsulting" },
+  { label: 'Desarrollo de Software', href: "/serviceDeve"},
+  { label: 'Correo Electrónico Empresarial', href: "/serviceMail" },
+  { label: 'Soporte técnico y mantenimiento continuo', href: "/serviceMaintainence" },
 ];
 
 const navLinks = [
