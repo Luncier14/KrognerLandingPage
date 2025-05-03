@@ -58,16 +58,22 @@ const PurposeSection = () => {
       icon: <img src={Mision} alt="Mision" className='w-full h-auto max-w-70 max-h-70' />,
       title: "Misión",
       description: "Nuestra misión es brindar un servicio personalizado y confiable que permita a nuestros clientes alcanzar sus objetivos tecnológicos, optimizando recursos y garantizando calidad en cada proyecto.",
+      Color: "bg-purple-300",
+      hoverColor: "hover:bg-purple-400"
     },
     {
       icon: <img src={Vision} alt="Vision" className='w-full h-auto max-w-70 max-h-70' />,
       title: "Visión",
       description: "Nos proyectamos como la empresa líder en soluciones tecnológicas en Costa Rica, reconocidos por nuestra innovación, atención al cliente y compromiso con la excelencia.",
+      Color: "bg-rose-200",
+      hoverColor: "hover:bg-rose-300"
     },
     {
       icon: <img src={Values} alt="Values" className='w-full h-auto max-w-70 max-h-70' />,
       title: "Valores",
       description: "Creemos en la confianza como base de cada relación con nuestros clientes, ofreciendo soluciones tecnológicas confiables, transparentes y sostenibles.",
+      Color: "bg-blue-100",
+      hoverColor: "hover:bg-blue-200"
     },
   ];
 
@@ -93,7 +99,9 @@ const PurposeSection = () => {
                 ease: "easeOut"
               }}
               viewport={{ once: true }}
-              className='bg-purple-200 min-w-[18rem] max-w-sm flex-shrink-0 cursor-pointer rounded-2xl p-6 hover:scale-105 hover:bg-purple-300 hover:shadow-xl transition-all duration-300 z-10 text-center flex flex-col items-center'
+              className={`${service.Color} ${service.hoverColor} min-w-[18rem] max-w-sm flex-shrink-0 cursor-pointer rounded-2xl p-6 hover:scale-105 hover:shadow-xl transition-all duration-300 z-10 text-center flex flex-col items-center`}
+
+
             >
               <div className='mb-4'>
                 <div className="w-20 h-20 flex items-center justify-center">
