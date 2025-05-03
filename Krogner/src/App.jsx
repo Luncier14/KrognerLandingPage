@@ -1,6 +1,7 @@
 import './App.css';
 import './index.css'; // o './App.css'
 import { Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 // Importa tus páginas
@@ -27,17 +28,19 @@ function App() {
       
       {/* Contenedor de rutas CAMBIANTES */}
       <div className='overflow-hidden'>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tienda" element={<Tienda />} />
-          <Route path="/serviceServer" element={<ServiceServer/>} />
-          <Route path="/serviceConsulting" element={<ServiceConsulting/>} />
-          <Route path="/serviceMail" element={<ServiceMail/>} />
-          <Route path="/serviceDeve" element={<ServiceDeve/>} />
-          <Route path="/serviceMaintainence" element={<ServiceMaintainence/>} />
-          <Route path="/serviceNetwork" element={<ServiceNetwork/>} />
-          <Route path="/about" element={<Nosotros/>} />
-        </Routes>
+       
+          <Routes>
+            <Route path="/" element={<Home />} /> 
+            <Route path="/tienda" element={<Tienda />} />
+            <Route path="/serviceServer" element={<ServiceServer/>} />
+            <Route path="/serviceConsulting" element={<ServiceConsulting/>} />
+            <Route path="/serviceMail" element={<ServiceMail/>} />
+            <Route path="/serviceDeve" element={<ServiceDeve/>} />
+            <Route path="/serviceMaintainence" element={<ServiceMaintainence/>} />
+            <Route path="/serviceNetwork" element={<ServiceNetwork/>} />
+            <Route path="/about" element={<Nosotros/>} />
+          </Routes>
+       
       </div>
       
       <Footer />
