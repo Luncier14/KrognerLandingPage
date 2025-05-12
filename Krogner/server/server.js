@@ -34,7 +34,7 @@ transporter.verify((error, success) => {
 });
 
 // Ruta para enviar correos
-app.post('/send', async (req, res) => {
+app.post('http://localhost:3001/send', async (req, res) => {
     const { firstName, lastName, company, email, phone, message } = req.body;
 
     if (!firstName || !lastName || !email || !message) {
