@@ -87,7 +87,7 @@ const PurposeSection = () => {
     >
       {/* Servicios (Misión, Visión, Valores) */}
       <section className='w-full mx-auto px-4 py-16 md:py-24 overflow-x-auto'>
-        <motion.div className='flex justify-center gap-6 md:gap-8 min-w-max'>
+        <div className='flex justify-center gap-6 md:gap-8 min-w-max'>
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -112,7 +112,7 @@ const PurposeSection = () => {
               <p className='text-gray-600 mb-4'>{service.description}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       {/* Features (centrado en pantalla con flexbox) */}
