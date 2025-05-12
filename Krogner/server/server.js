@@ -33,7 +33,7 @@ transporter.verify((error, success) => {
     }
 });
 
-// Ruta para enviar correos
+// Ruta para enviar correos (arreglada aquí la URL)
 app.post('/send', async (req, res) => {
     const { firstName, lastName, company, email, phone, message } = req.body;
 
@@ -107,7 +107,8 @@ app.post('/send', async (req, res) => {
           
           ---
           Enviado el ${new Date().toLocaleString()} desde el formulario de contacto
-        `};
+        `
+    };
 
     try {
         const info = await transporter.sendMail(mailOptions);
@@ -124,6 +125,12 @@ app.post('/send', async (req, res) => {
     }
 });
 
+// Ruta raíz para prueba
+app.get('/', (req, res) => {
+    res.send('Servidor funcionando');
+});
+
+// Inicio del servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
